@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: client-app
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/atrishakova/spring-cloud-config-repo
+          default-label: main
+          clone-on-start: true
+          search-paths:
+            - '{application}'
